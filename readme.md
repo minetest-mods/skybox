@@ -3,14 +3,19 @@
 
 ### License of code and artwork
 
+* Code:
+
 Copyright (C) 2017 - Auke Kok <sofar@foo-projects.org>
 
 Provides a basic API for modifying a player sky box in a coherent
 fashion.
 
+* Artwork (textures):
+
 SkyboxSet by Heiko Irrgang ( http://gamvas.com ) is licensed under
 the Creative Commons Attribution-ShareAlike 3.0 Unported License.
 Based on a work at http://93i.de.
+
 
 ### Usage
 
