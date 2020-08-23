@@ -16,6 +16,8 @@ SkyboxSet by Heiko Irrgang ( http://gamvas.com ) is licensed under
 the Creative Commons Attribution-ShareAlike 3.0 Unported License.
 Based on a work at http://93i.de.
 
+VoxelClouds by Treer (https://github.com/Treer) is licensed under
+the Creative Commons Attribution-ShareAlike 3.0 Unported License.
 
 ### Usage
 

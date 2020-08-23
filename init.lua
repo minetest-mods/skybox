@@ -27,6 +27,7 @@ local skies = {
 		height = 80, thickness = 32, speed = {x = 4, y = 3},}},
 	{"TropicalSunnyDay", "#f1f4ee", 1.0, { density = 0.25, color = "#fffffffb", ambient = "#000000",
 		height = 120, thickness = 8, speed = {x = -2, y = 0},}},
+	{"VoxelClouds", "#70afd8", 1.0, { density = 0 }},
 }
 
 --
