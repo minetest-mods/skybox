@@ -76,7 +76,7 @@ end
 -- registrations and load/save code
 --
 
-minetest.register_on_joinplayer(function(player)
+skybox.restore = function(player)
 	local sky = player:get_attribute("skybox:skybox")
 	if not sky or sky == "" then
 		skybox.clear(player)
@@ -89,7 +89,8 @@ minetest.register_on_joinplayer(function(player)
 		end
 		skybox.clear(player)
 	end
-end)
+end
+minetest.register_on_joinplayer(skybox.restore)
 
 minetest.register_privilege("skybox", {
 	description = "Change sky box for yourself",
