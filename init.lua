@@ -41,14 +41,24 @@ skybox.set = function(player, number)
 	else
 		local sky = skies[number]
 		player:override_day_night_ratio(sky[3])
-		player:set_sky(sky[2], "skybox", {
+		local textures = {
 			sky[1] .. "Up.jpg",
 			sky[1] .. "Down.jpg",
 			sky[1] .. "Front.jpg",
 			sky[1] .. "Back.jpg",
 			sky[1] .. "Left.jpg",
 			sky[1] .. "Right.jpg",
-		}, true)
+		}
+		if player.get_sky_color ~= nil then
+			player:set_sky({
+				base_color = sky[2],
+				type = "skybox",
+				textures = textures,
+				clouds = true
+			})
+		else
+			player:set_sky(sky[2], "skybox", textures, true)
+		end
 		player:set_clouds(sky[4])
 		player:set_attribute("skybox:skybox", sky[1])
 	end
@@ -56,7 +66,11 @@ end
 
 skybox.clear = function(player)
 	player:override_day_night_ratio(nil)
-	player:set_sky("white", "regular")
+	if player.get_sky_color ~= nil then
+		player:set_sky({base_color = "white", type = "regular"})
+	else
+		player:set_sky("white", "regular")
+	end
 	player:set_clouds({
 		density = 0.4,
 		color = "#fff0f0e5",
