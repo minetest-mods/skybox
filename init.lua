@@ -86,6 +86,10 @@ skybox.add = function(def)
 	table.add(skies, def)
 end
 
+skybox.get_skies = function()
+	return table.copy(skies)
+end
+
 --
 -- registrations and load/save code
 --
