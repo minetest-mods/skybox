@@ -56,6 +56,9 @@ skybox.set = function(player, number)
 				textures = textures,
 				clouds = true
 			})
+			player:set_sun({visible = false, sunrise_visible = false})
+			player:set_moon({visible = false})
+			player:set_stars({visible = false})
 		else
 			player:set_sky(sky[2], "skybox", textures, true)
 		end
@@ -79,6 +82,10 @@ skybox.clear = function(player)
 		thickness = 16,
 		speed = {x = 0, y = -2},
 	})
+	player:set_sun({visible = true, sunrise_visible = true})
+	player:set_moon({visible = true})
+	player:set_stars({visible = true})
+
 	player:set_attribute("skybox:skybox", "off")
 end
 
