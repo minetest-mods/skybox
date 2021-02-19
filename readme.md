@@ -36,6 +36,16 @@ The `skybox` handle can be used to perform various actions:
 `skybox.add(skyboxdef)`
  -- Add a new skybox with skyboxdef to the list of available skyboxes.
 
+`skybox.get_skies()`
+ -- Get a list of availiable skyboxes
+ -- Example value of `skybox.get_skies()[1]`:
+ --[[
+     ```lua
+    {"DarkStormy", "#1f2226", 0.5, { density = 0.5, color = "#aaaaaae0", ambient = "#000000",
+    	height = 64, thickness = 32, speed = {x = 6, y = -6},}},
+	```
+ ]]
+
 
 ```
 skyboxdef = {
