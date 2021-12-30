@@ -63,7 +63,7 @@ skybox.set = function(player, number)
 			player:set_sky(sky[2], "skybox", textures, true)
 		end
 		player:set_clouds(sky[4])
-		player:get_meta():set_string("skybox:skybox", sky[1])
+		player:set_attribute("skybox:skybox", sky[1])
 	end
 end
 
@@ -86,11 +86,11 @@ skybox.clear = function(player)
 	player:set_moon({visible = true})
 	player:set_stars({visible = true})
 
-	player:get_meta():set_string("skybox:skybox", "off")
+	player:set_attribute("skybox:skybox", "off")
 end
 
 skybox.add = function(def)
-	table.insert(skies, def)
+	table.add(skies, def)
 end
 
 skybox.get_skies = function()
@@ -102,7 +102,7 @@ end
 --
 
 minetest.register_on_joinplayer(function(player)
-	local sky = player:get_meta():get_string("skybox:skybox")
+	local sky = player:get_attribute("skybox:skybox")
 	if not sky or sky == "" then
 		skybox.clear(player)
 	else
