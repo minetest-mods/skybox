@@ -90,7 +90,7 @@ skybox.clear = function(player)
 end
 
 skybox.add = function(def)
-	table.add(skies, def)
+	table.insert(skies, def)
 end
 
 skybox.get_skies = function()
