@@ -58,8 +58,8 @@ skybox.set = function(player, number)
 			})
 			-- making the sun invisible deactivates the dynamic shadows
 			-- making the sun visible with an invisible texture keeps shadows intact
-			player:set_sun({visible = true, sunrise_visible = false, texture = "skybox_invisible.png"})
-			player:set_moon({visible = true, texture = "skybox_invisible.png"})
+			player:set_sun({visible = true, sunrise_visible = false, texture = "blank.png"})
+			player:set_moon({visible = true, texture = "blank.png"})
 			player:set_stars({visible = false})
 		else
 			player:set_sky(sky[2], "skybox", textures, true)
